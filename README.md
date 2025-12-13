@@ -17,5 +17,29 @@
 - Remove the ``index.css`` and ``App.css`` file from ``srs`` folder -> Since it's default page
 - Remove import lines that are associated with the index.css and App.css file existed inside the ``src`` folder.
 - Remove all the code snippets inside the ``return`` function existed on ``App.jsx``
+
+## Errors
+- When react-router-dom is missing from client ``packgae.json`` file.
 - 
+## Installing MongoDB in Kubunutu server and UI (compass)
+- Refer ```https://www.mongodb.com/docs/v8.0/tutorial/install-mongodb-on-ubuntu/```
+- sudo apt-get install gnupg curl
+- curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+   --dearmor
+- echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+- sudo apt-get update
+- sudo apt-get install -y mongodb-org
+- sudo systemctl daemon-reload
+- sudo systemctl start mongod
+- sudo systemctl status mongod
+- sudo systemctl enable mongod
+- Log on ``/var/log/mongodb/mongod.log``
+- ``mongosh``
+
+**Compass**
+- Refer ```https://www.mongodb.com/try/download/compass```
+- After downloading the ``.deb`` file
+    - ```sudo apt install -f ./mongodb-compass_1.48.2_amd64.deb```
+- Search ``Mongo`` n your serach bar
 
