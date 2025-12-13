@@ -1,12 +1,26 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Signup(){
+
+    const [name, setName] = useState()
+    const [email, setEmail] = useState()
+    const [password, setPasword] = useState()
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        axios.post('http://localhost:3001/register', {name, email, password})
+        .then (result => console.log(result))
+        .catch (err => console.log(err))
+    }
+
     return (
         <div className="d-flex justify-content-center align-items-center bg-secondary vh-100" >
             <div className="bg-white p-3 rounded w-25">
                 <h2>SignUp</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     
                 <div className="mb-3">
                     <label htmlFor="email">
@@ -18,6 +32,7 @@ function Signup(){
                         autoComplete="off"
                         name="email"
                         className="form-control rounded-0"
+                        onChange={(e) => setName(e.target.value)}
                     />
                 </div>
 
@@ -32,6 +47,7 @@ function Signup(){
                         autoComplete="off"
                         name="email"
                         className="form-control rounded-0"
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
 
@@ -44,6 +60,7 @@ function Signup(){
                         placeholder="Enter Password"
                         name="password"
                         className="form-control rounded-0"
+                        onChange={(e) => setPasword(e.target.value)}
                     />
                 </div>
 
