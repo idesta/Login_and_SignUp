@@ -8,48 +8,48 @@ function Signup(){
                 <h2>SignUp</h2>
                 <form>
                     
-                    <div className="mb-3">
-                        <label htmlFor="email">
-                            <strong>Name</strong>
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="Enter Name"
-                            autoComplete="off"
-                            name="email"
-                            className="form-control rounded-0"
-                        />
-                    </div>
+                <div className="mb-3">
+                    <label htmlFor="email">
+                        <strong>Name</strong>
+                    </label>
+                    <input
+                        type="text"
+                        placeholder="Enter Name"
+                        autoComplete="off"
+                        name="email"
+                        className="form-control rounded-0"
+                    />
+                </div>
 
 
-                    <div className="mb-3">
-                        <label htmlFor="email">
-                            <strong>Email</strong>
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="Enter Email"
-                            autoComplete="off"
-                            name="email"
-                            className="form-control rounded-0"
-                        />
-                    </div>
+                <div className="mb-3">
+                    <label htmlFor="email">
+                        <strong>Email</strong>
+                    </label>
+                    <input
+                        type="text"
+                        placeholder="Enter Email"
+                        autoComplete="off"
+                        name="email"
+                        className="form-control rounded-0"
+                    />
+                </div>
 
-                    <div className="mb-3">
-                        <label htmlFor="email">
-                            <strong>Email</strong>
-                        </label>
-                        <input
-                            type="password"
-                            placeholder="Enter Password"
-                            name="password"
-                            className="form-control rounded-0"
-                        />
-                    </div>
+                <div className="mb-3">
+                    <label htmlFor="email">
+                        <strong>Email</strong>
+                    </label>
+                    <input
+                        type="password"
+                        placeholder="Enter Password"
+                        name="password"
+                        className="form-control rounded-0"
+                    />
+                </div>
 
-                    <button type="submit" className="btn btn-success w-100 rounded-0">
-                        SignUp
-                    </button>
+                <button type="submit" className="btn btn-success w-100 rounded-0">
+                    SignUp
+                </button>
                 </form>
                 <p>Already have an account?</p>
 
@@ -62,4 +62,4 @@ function Signup(){
     
 }
 
-export default Signup;sssssss
+export default Signup;

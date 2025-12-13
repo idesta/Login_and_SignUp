@@ -15,6 +15,7 @@
     - under the ``scripts`` add ``"start": "nodemon index.js"``
 - ``npm start``
 - Remove the ``index.css`` and ``App.css`` file from ``srs`` folder -> Since it's default page
-- remove import lines that are associated with the index.css and App.css file existed inside the ``src`` folder.
+- Remove import lines that are associated with the index.css and App.css file existed inside the ``src`` folder.
+- Remove all the code snippets inside the ``return`` function existed on ``App.jsx``
 - 
 
