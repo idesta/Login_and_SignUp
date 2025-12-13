@@ -25,7 +25,7 @@
 - Refer ```https://www.mongodb.com/docs/v8.0/tutorial/install-mongodb-on-ubuntu/```
 - sudo apt-get install gnupg curl
 - curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
-   sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+   sudo gpg -o /usr/share/keyrings/mongodb-serr" clver-8.0.gpg \
    --dearmor
 - echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
 - sudo apt-get update
@@ -41,5 +41,7 @@
 - Refer ```https://www.mongodb.com/try/download/compass```
 - After downloading the ``.deb`` file
     - ```sudo apt install -f ./mongodb-compass_1.48.2_amd64.deb```
-- Search ``Mongo`` n your serach bar
-
+- Search ``Mongo`` on your serach bar and open it
+- Start by creating ``new connection``
+### Phase 1 video completed"
+### The next one will be deploying this pages via docker and connect them
