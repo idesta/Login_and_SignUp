@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
@@ -11,13 +11,19 @@ function Signup(){
     const [password, setPasword] = useState()
     const navigate = useNavigate()
 
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        if (token){
+            navigate("/home", {replace: true});
+        }
+    }, [navigate])
 
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post('http://localhost:3001/register', {name, email, password})
         .then (result => {console.log(result)
 
-            navigate('/login')
+            navigate('/login', {replace: true});
         })
 
         .catch (err => console.log(err))
@@ -60,7 +66,7 @@ function Signup(){
 
                 <div className="mb-3">
                     <label htmlFor="email">
-                        <strong>Email</strong>
+                        <strong>Password</strong>
                     </label>
                     <input
                         type="password"
